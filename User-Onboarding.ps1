@@ -7,6 +7,6 @@ New-ADUser `
     -Instance $user_template `
     -Name 'Elmer Test' `
     -SamAccountName 'etest' `
-    -UserPrincipalName 'etest@belusallc.com' `
+    -UserPrincipalName 'etest@mydomain.com' `
     -AccountPassword (Read-Host -AsSecureString "Password input") `
     -Enabled $True

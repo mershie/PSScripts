@@ -1,0 +1,2 @@
+FirstName,LastName,Description,Title,Email,Username,UserPrincipalName,Password,telephoneNumber,MobilePhone,Department,Company,Street,City,State,PostalCode,Country,OU
+John,Smith,Team Leader,Team Leader,john.smith@mydomain.com,john.smith,,<<mypassword>>,,,Production,Company XYZ,,,NA,,United States,"OU=User,OU=Production,OU=XYZ,OU=Local_users,DC=mydomain,DC=local"

@@ -1,2 +1,2 @@
 FirstName,LastName,Description,Title,Email,Username,UserPrincipalName,Password,telephoneNumber,MobilePhone,Department,Company,Street,City,State,PostalCode,Country,OU
-Elmer,Test,Test Account,Test Account,etest@belusallc.com,etest,etest@belusallc.com,Belusa1234!,1528,+63 9171789726,IT,BelUSA LLC,"36th Flr., Unionbank Plaza Bldg., Meralco Ave., cor Onyx Rd., Ortigas Center",Pasig City,Manila,1605,Philippines,"OU=IT Coordinator,OU=IT,OU=Manila_Users,OU=Local_users,DC=bel,DC=local"
+John,Smith,Team Leader,Team Leader,john.smith@mydomain.com,john.smith,,<<mypassword>>,,,Production,Company XYZ,,,NA,,United States,"OU=User,OU=Production,OU=XYZ,OU=Local_users,DC=mydomain,DC=local"

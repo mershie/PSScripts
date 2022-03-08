@@ -1,6 +1,6 @@
-﻿#Create new AD user using a import-csv
+#Create new AD user using a import-csv
 
-$ADUsers = Import-csv C:\Users\ecatapang.BEL\Documents\Script\add-aduser-import.csv
+$ADUsers = Import-csv C:\Users\ecatapang.BEL\Documents\Script\add-aduser-import2.csv
 
 foreach ($User in $ADUsers)
 {
@@ -13,8 +13,9 @@ foreach ($User in $ADUsers)
        $OU = $User.OU
        $Description = $User.Description
        $Title = $User.Title
-       $UPN = $User.UserPrincipalName
-       $Extension = $User.telephone
+       $Email = $User.Email
+       #$UPN = $User.UserPrincipalName
+       #$Extension = $User.telephone
        $Mobile = $User.MobilePhone
        $Company = $User.Company
        $Address = $User.Street
@@ -36,14 +37,19 @@ foreach ($User in $ADUsers)
         #Account will be created in the OU listed in the $OU variable in the CSV file; don’t forget to change the domain name in the"-UserPrincipalName" variable
             New-ADUser `
             -SamAccountName $Username `
-            -UserPrincipalName "$Username@yourdomain.com" `
+            -UserPrincipalName "$Username@bluepackmarketing.com" `
             -Name "$Firstname $Lastname" `
             -GivenName $Firstname `
             -Surname $Lastname `
             -Enabled $True `
+            -Description $Description `
             -ChangePasswordAtLogon $False `
-            -DisplayName "$Lastname, $Firstname" `
+            -DisplayName "$Firstname $Lastname" `
+            -EmailAddress $Email `
+            -Title $Title `
             -Department $Department `
+            -Company $Company `
+            -State $State `
             -Path $OU `
             -AccountPassword (convertto-securestring $Password -AsPlainText -Force)
 
